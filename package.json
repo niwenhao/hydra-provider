@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "serve": "unset http_proxy && node index.js",
-    "debug": "unset http_proxy && node debug index.js",
     "inspect": "unset http_proxy && node --inspect-brk index.js",
     "init": "unset http_proxy && node init.js",
-    "clean": "unset http_proxy && node clean.js"
+    "clean": "unset http_proxy && node clean.js",
+    "hydra": "unset http_proxy && DATABASE_URL='postgres://hydra:password@localhost:5432/hydradb?sslmode=disable' SYSTEM_SECRET=d69551a4-88cd-46b9-a937-2719fd1e3543 LOG_LEVEL=debug OAUTH2_ISSUER_URL=http://localhost/ OAUTH2_LOGIN_URL=http://localhost/provider/login OAUTH2_CONSENT_URL=http://localhost/provider/consent hydra serve --dangerous-force-http"
   },
   "dependencies": {
     "axios": "^0.18.0",
