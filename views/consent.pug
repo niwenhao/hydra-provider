@@ -1,0 +1,33 @@
+doctype html
+
+html
+    head
+        title Access permit
+        script(type="application/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script.
+            $(function(){
+                $('#grant').click(e => {
+                    $('#action').val('grant')
+                    $('#form').submit()
+                })
+                $('#deny').click(e => {
+                    $('#action').val('deny')
+                    $('#form').submit()
+                })
+            })
+    body
+        pre #{message}
+        div
+            form#form(method="POST", action="consent")
+                input#action(
+                    type='hidden'
+                    name='action'
+                )
+                input#challenge(
+                    type='hidden'
+                    name='challenge'
+                    value=challenge
+                )
+                button#grant(type="button") Grant
+                | &nbsp;
+                button#deny(type="button") Deny

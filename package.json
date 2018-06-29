@@ -1,0 +1,21 @@
+{
+  "name": "hydra-provider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "unset http_proxy && node index.js",
+    "debug": "unset http_proxy && node debug index.js",
+    "inspect": "unset http_proxy && node --inspect-brk index.js",
+    "init": "unset http_proxy && node init.js",
+    "clean": "unset http_proxy && node clean.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "pug": "^2.0.3",
+    "query-string": "^6.1.0",
+    "url-search-params-polyfill": "^4.0.0",
+    "uuid": "^3.3.2"
+  }
+}

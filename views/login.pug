@@ -1,0 +1,28 @@
+doctype html
+
+html
+    head
+        title login page
+    body
+        pre #{message}
+        div
+            form(method='POST', action='login')
+                input(
+                    name='challenge'
+                    type="hidden"
+                    value=challenge
+                )
+                div
+                    label User name
+                    input(
+                        type='text'
+                        name='username'
+                    )
+                div
+                    label Password
+                    input(
+                        type='password'
+                        name='password'
+                    )
+                div
+                    button(type='submit') Login
