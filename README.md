@@ -31,4 +31,10 @@
         認証初期化処理。
     3.  /token/{access_token|refresh_token}(GET)  
         トークンintrospect(RFC7662)
-
+## CA API Gatewayと比べって、HYDRAの特徴
+* OPEN SOURCE
+* GUIがない。
+* 認証、認可の業務ロジック部分をそっとにアウトソーシングする。
+* 一部の仕様が先サポートする。(offline_access)
+* セキュリティ関連情報、token類をハッシュ化して、DBに保存。トークン情報を取得できない。  
+  しかし、トークンとクライアント情報がわかる場合、introspectionを通して、取得できる。
