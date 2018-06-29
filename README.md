@@ -1,4 +1,4 @@
-# HYDRAの提供者プログラム試験実装
+# [ory/hydra](https://github.com/ory/hydra)の提供者プログラム試験実装
 ## npm 実行スクリプト
 1.  serve  
     プロバイダーサーバを起動する。
